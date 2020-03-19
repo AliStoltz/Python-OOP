@@ -1,4 +1,4 @@
-####### defining class and methods #########
+####### DEFINING class and methods #########
 
 class User: 
   total_users = 0
@@ -12,7 +12,7 @@ class User:
 
   
   def __str__(self):
-    return f"<Class User> - name = {self.name}, email = {self.email}, Memory Location = {hex(id(self))}"
+        return f'<Class User> - name = {self.name}, email = {self.email}, Memory Location = {hex(id(self))}'
     
 
   def greet(self):
@@ -32,3 +32,18 @@ class Admin(User):
 
   def greet(self):
     return f'Hi! My name is {self.name}. Account Type = {self.account_type}. My superpower is {self.superpower}!'
+
+
+
+####### USE class and methods ##########
+
+user1 = User('John Doe', 'jdoe@gmail.com', '1234', 'admin')
+print(user1.greet())
+
+user2 = User('Keving Smith', 'ksmith@gmail.com', '1234')
+print(user2.greet())
+
+print(User.decrement_total())
+
+admin1 = Admin('Shelly Seashore', 'seashore@gmail.com', '1234', 'admin', 'selling sally shells')
+print(admin1.greet())
